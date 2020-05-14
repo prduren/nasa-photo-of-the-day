@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
+import PhotoCard from './components/photocard/PhotoCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [theData, setTheData] = useState("");
@@ -11,10 +14,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Header />
+      <PhotoCard />
+      <Footer />
     </div>
   );
 }
